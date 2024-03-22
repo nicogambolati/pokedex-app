@@ -25,7 +25,7 @@ export const Games = ({ moves }	) => {
           <div className="btn-group">
             {data.results.map((game) => (
               <button
-                key={game.id}
+                key={game.name}
                 type="button"
                 className="btn btn-outline-primary"
                 aria-current="page"
