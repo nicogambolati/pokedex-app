@@ -27,7 +27,7 @@ export const Games = ({ moves }	) => {
               <button
                 key={game.name}
                 type="button"
-                className="btn btn-outline-primary"
+                className={`btn btn-outline-primary ${gameSelected === game.name ? 'active' : ''}`}
                 aria-current="page"
                 onClick={() => handlessGameSelected(game.name)}
               >
