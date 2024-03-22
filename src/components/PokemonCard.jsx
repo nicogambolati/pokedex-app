@@ -15,18 +15,18 @@ export const PokemonCard = ({
   return (
     <section className="card-container">
       <div className="card-header d-flex gap-2">
-        <NameId name={name} id={id}/>
+        <NameId name={name} id={id} />
         <Types types={types} />
       </div>
 
       <Sprites sprites={sprites} />
 
-      <Abilities abilities={abilities} />
+      <div className="d-flex align-items-center gap-2 ">
+        <h3>Abilities: </h3>
+        <Abilities abilities={abilities} />
+      </div>
 
-      <Games moves={moves}/>
-
+      <Games moves={moves} />
     </section>
   );
 };
-
-
