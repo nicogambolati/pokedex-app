@@ -15,7 +15,7 @@ export const Pokedex = () => {
 
       <div className="d-flex justify-content-center">
         <button
-          className="btn btn-primary mt-4"
+          className="btn btn-primary mt-4 me-2"
           onClick={() => (counter > 1 ? decrement() : null)}
         >
           Anterior

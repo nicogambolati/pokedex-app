@@ -22,12 +22,12 @@ export const Games = ({ moves }	) => {
         <LoadingMessage />
       ) : (
         <>
-          <div className="btn-group">
+          <div className="btn-group flex-wrap ">
             {data.results.map((game) => (
               <button
                 key={game.name}
                 type="button"
-                className={`btn btn-outline-primary ${gameSelected === game.name ? 'active' : ''}`}
+                className={`btn btn-outline-primary m-1 ${gameSelected === game.name ? 'active' : ''}`}
                 aria-current="page"
                 onClick={() => handlessGameSelected(game.name)}
               >
