@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useFetch } from "../hooks";
 import { LoadingMessage } from "./LoadingMessage";
 import { TabMoves } from "./TabMoves";
+import { GameAsset } from "./GameAsset";
 
 export const Games = ({ moves }	) => {
   const { data, isLoading, hasError } = useFetch(
@@ -31,6 +32,8 @@ export const Games = ({ moves }	) => {
                 aria-current="page"
                 onClick={() => handlessGameSelected(game.name)}
               >
+                {/* <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt={game.name} /> */}
+                <GameAsset gameName={game.name}/>
                 {game.name}
               </button>
             ))}
