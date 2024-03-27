@@ -1,6 +1,6 @@
 
 
-export const TableMoves = () => {
+export const TableMoves = ({moves}) => {
   return (
     <table className="table">
   <thead>
