@@ -1,6 +1,8 @@
 import { useCounter, useFetch } from "../hooks";
+import { Header } from "./Header";
 import { LoadingMessage } from "./LoadingMessage";
 import { PokemonCard } from "./PokemonCard";
+
 
 export const Pokedex = () => {
   const { counter, decrement, increment } = useCounter(1);
@@ -10,20 +12,7 @@ export const Pokedex = () => {
 
   return (
     <>
-      <h1>Pokedex</h1>
-      <hr />
-
-      <div className="d-flex justify-content-center">
-        <button
-          className="btn btn-primary mt-4 me-2"
-          onClick={() => (counter > 1 ? decrement() : null)}
-        >
-          Anterior
-        </button>
-        <button className="btn btn-primary mt-4" onClick={() => increment()}>
-          Siguiente
-        </button>
-      </div>
+      <Header />
 
       {isLoading ? (
         <LoadingMessage />
@@ -40,10 +29,10 @@ export const Pokedex = () => {
           types={data?.types}
           abilities={data?.abilities}
           moves={data?.moves}
+          decrement={decrement}
+          increment={increment}
         />
       )}
-
-
     </>
   );
 };

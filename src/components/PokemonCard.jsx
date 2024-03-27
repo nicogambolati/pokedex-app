@@ -3,6 +3,7 @@ import { Types } from "./Types";
 import { NameId } from "./NameId";
 import { Sprites } from "./Sprites";
 import { Games } from "./TabGames";
+import { PreviousNextCTA } from "./PreviousNextCTA";
 
 export const PokemonCard = ({
   id,
@@ -11,6 +12,8 @@ export const PokemonCard = ({
   types = [],
   abilities = [],
   moves = [],
+  decrement,
+  increment
 }) => {
   return (
     <section className="card-container">
@@ -20,6 +23,12 @@ export const PokemonCard = ({
       </div>
 
       <Sprites sprites={sprites} />
+
+      <PreviousNextCTA
+        counter={id}
+        decrement={decrement}
+        increment={increment}
+      />
 
       <div className="d-flex align-items-center gap-2 ">
         <h3>Abilities: </h3>
