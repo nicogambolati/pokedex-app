@@ -28,13 +28,13 @@ export const Games = ({ moves }	) => {
               <button
                 key={game.name}
                 type="button"
-                className={`btn btn-outline-primary m-1 ${gameSelected === game.name ? 'active' : ''}`}
+                className={`btn btn-outline-primary m-1 text-capitalize ${gameSelected === game.name ? 'active' : ''}`}
                 aria-current="page"
                 onClick={() => handlessGameSelected(game.name)}
               >
                 {/* <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt={game.name} /> */}
                 <GameAsset gameName={game.name}/>
-                {game.name}
+                {game.name.replace(/-/g, " ")}
               </button>
             ))}
           </div>
@@ -45,3 +45,6 @@ export const Games = ({ moves }	) => {
     </section>
   );
 };
+
+// const truncatedStr = gameName.replace(/-/g, " ");
+// console.log(truncatedStr); // Output: "examplestring"
