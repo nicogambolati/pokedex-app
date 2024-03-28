@@ -50,6 +50,29 @@
     border-radius: 0;
 }
 
+//Header
+.navbar {
+    .container-fluid {
+        padding: 0 20px;
+
+        .navbar-brand {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+}
+
+//Pokecard
+.card-container {
+    padding: 0 20px;
+}
+
+
 // LoadingMessage
 .loading-message {
     height: 200px;
