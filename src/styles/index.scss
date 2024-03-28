@@ -49,3 +49,9 @@
 .btn-group>:not(.btn-check)+.btn {
     border-radius: 0;
 }
+
+// LoadingMessage
+.loading-message {
+    height: 200px;
+    gap: 16px;
+}
