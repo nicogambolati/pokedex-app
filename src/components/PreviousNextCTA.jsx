@@ -5,10 +5,10 @@ export const PreviousNextCTA = ({counter, decrement, increment}) => {
         className="btn btn-primary mt-4 me-2"
         onClick={() => (counter > 1 ? decrement() : null)}
       >
-        Anterior
+        Previous
       </button>
       <button className="btn btn-primary mt-4" onClick={() => increment()}>
-        Siguiente
+        Next
       </button>
     </div>
   );

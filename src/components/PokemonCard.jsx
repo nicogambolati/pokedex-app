@@ -19,7 +19,6 @@ export const PokemonCard = ({
     <section className="card-container">
       <div className="card-header d-flex gap-2">
         <NameId name={name} id={id} />
-        <Types types={types} />
       </div>
 
       <Sprites sprites={sprites} />
@@ -29,6 +28,11 @@ export const PokemonCard = ({
         decrement={decrement}
         increment={increment}
       />
+      <div className="d-flex align-items-center gap-2 ">
+        <h2>Type: </h2>
+        <Types types={types} />
+      </div>
+      
 
       <div className="d-flex align-items-center gap-2 ">
         <h3>Abilities: </h3>
